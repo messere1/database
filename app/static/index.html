@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>芝加哥犯罪态势</title>
+    <link rel="stylesheet" href="/static/styles.css?v=20260330c" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+
+    <main class="container">
+      <header class="hero reveal">
+        <h1>芝加哥犯罪态势</h1>
+        <div class="health" id="health-indicator">服务状态：检测中...</div>
+      </header>
+
+      <section class="panel reveal">
+        <h2>筛选条件</h2>
+        <form id="filters" class="filters">
+          <label>
+            起始年份
+            <select id="start-year">
+              <option value="">全部年份</option>
+            </select>
+          </label>
+          <label>
+            结束年份
+            <select id="end-year">
+              <option value="">全部年份</option>
+            </select>
+          </label>
+          <label class="crime-type-field">
+            犯罪类型
+            <div id="crime-type-dropdown" class="multi-select">
+              <button
+                type="button"
+                id="crime-type-trigger"
+                class="multi-select-trigger"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+              >
+                全部类型（已勾选）
+              </button>
+              <div id="crime-type-menu" class="multi-select-menu" role="listbox" aria-multiselectable="true" hidden></div>
+            </div>
+            <select id="crime-type" class="native-multi-select" multiple aria-hidden="true" tabindex="-1" hidden></select>
+            <span class="input-hint">下拉框内可上下滚动勾选；默认勾选全部类型</span>
+          </label>
+          <label>
+            排名数量 TopN
+            <input id="top-n" type="number" min="3" max="30" value="10" />
+          </label>
+          <div class="btn-row">
+            <button type="submit" class="btn btn-primary">更新看板</button>
+            <button type="button" id="reset-btn" class="btn btn-ghost">重置</button>
+          </div>
+        </form>
+        <p id="status-text" class="status-text">准备就绪。</p>
+      </section>
+
+      <section class="kpi-grid reveal">
+        <article class="kpi-card">
+          <div class="kpi-title">总记录数</div>
+          <div class="kpi-value" id="kpi-total">--</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-title">时间范围</div>
+          <div class="kpi-value" id="kpi-range">--</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-title">犯罪类型数</div>
+          <div class="kpi-value" id="kpi-types">--</div>
+        </article>
+        <article class="kpi-card">
+          <div class="kpi-title">缺失字段总量</div>
+          <div class="kpi-value" id="kpi-missing">--</div>
+        </article>
+      </section>
+
+      <section class="chart-grid reveal">
+        <article class="chart-card">
+          <div class="chart-head">
+            <h3>年度趋势</h3>
+            <p id="insight-annual" class="insight"></p>
+          </div>
+          <div id="chart-annual" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="chart-head">
+            <h3>周内分布</h3>
+            <p id="insight-weekly" class="insight"></p>
+          </div>
+          <div id="chart-weekly" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="chart-head">
+            <h3>小时分布</h3>
+            <p id="insight-hourly" class="insight"></p>
+          </div>
+          <div id="chart-hourly" class="chart"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="chart-head">
+            <h3>犯罪类型占比</h3>
+            <p id="insight-type" class="insight"></p>
+          </div>
+          <div id="chart-type" class="chart"></div>
+        </article>
+
+        <article class="chart-card chart-card-wide">
+          <div class="chart-head">
+            <h3>重点警区对比</h3>
+            <p id="insight-district" class="insight"></p>
+          </div>
+          <div id="chart-district" class="chart"></div>
+        </article>
+
+        <article class="chart-card chart-card-wide">
+          <div class="chart-head">
+            <h3>星期-小时热力图</h3>
+            <p id="insight-heatmap" class="insight"></p>
+          </div>
+          <div id="chart-heatmap" class="chart chart-tall"></div>
+        </article>
+
+        <article class="chart-card chart-card-wide">
+          <div class="chart-head">
+            <h3>重点类型年度多折线</h3>
+            <p id="insight-yoy" class="insight"></p>
+          </div>
+          <div id="chart-yoy" class="chart chart-tall"></div>
+        </article>
+      </section>
+
+      <section class="panel reveal">
+        <h2>结论</h2>
+        <ol id="conclusion-list" class="conclusion-list"></ol>
+      </section>
+    </main>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <script src="/static/app.js?v=20260330c"></script>
+  </body>
+</html>

@@ -1,0 +1,2444 @@
+{
+  "overview": {
+    "total_rows": 7784664,
+    "min_occurrence_time": "2001-01-01 00:00:00",
+    "max_occurrence_time": "2023-04-21 23:59:00",
+    "distinct_crime_types": 36,
+    "distinct_districts": 24,
+    "distinct_community_areas": 78
+  },
+  "quality": {
+    "total_rows": 7784664,
+    "missing_counts": {
+      "missing_source_id": 0,
+      "missing_occurred_at": 0,
+      "missing_primary_type": 0,
+      "missing_district": 47,
+      "missing_community_area": 613476,
+      "missing_latitude": 86848,
+      "missing_longitude": 86848,
+      "missing_arrest": 0,
+      "missing_domestic": 0
+    }
+  },
+  "annual": {
+    "analysis_id": "annual_trend",
+    "title": "Annual Crime Trend",
+    "description": "Yearly total crime count trend. Optionally filter by crime type.",
+    "chart_type": "line",
+    "dimensions": [
+      "year_num"
+    ],
+    "metrics": [
+      "crime_count"
+    ],
+    "data": [
+      {
+        "year_num": 2001,
+        "crime_count": 485878
+      },
+      {
+        "year_num": 2002,
+        "crime_count": 486802
+      },
+      {
+        "year_num": 2003,
+        "crime_count": 475979
+      },
+      {
+        "year_num": 2004,
+        "crime_count": 469421
+      },
+      {
+        "year_num": 2005,
+        "crime_count": 453771
+      },
+      {
+        "year_num": 2006,
+        "crime_count": 448174
+      },
+      {
+        "year_num": 2007,
+        "crime_count": 437084
+      },
+      {
+        "year_num": 2008,
+        "crime_count": 427167
+      },
+      {
+        "year_num": 2009,
+        "crime_count": 392819
+      },
+      {
+        "year_num": 2010,
+        "crime_count": 370496
+      },
+      {
+        "year_num": 2011,
+        "crime_count": 351964
+      },
+      {
+        "year_num": 2012,
+        "crime_count": 336262
+      },
+      {
+        "year_num": 2013,
+        "crime_count": 307468
+      },
+      {
+        "year_num": 2014,
+        "crime_count": 275731
+      },
+      {
+        "year_num": 2015,
+        "crime_count": 264755
+      },
+      {
+        "year_num": 2016,
+        "crime_count": 269786
+      },
+      {
+        "year_num": 2017,
+        "crime_count": 269071
+      },
+      {
+        "year_num": 2018,
+        "crime_count": 268773
+      },
+      {
+        "year_num": 2019,
+        "crime_count": 261245
+      },
+      {
+        "year_num": 2020,
+        "crime_count": 212092
+      },
+      {
+        "year_num": 2021,
+        "crime_count": 208571
+      },
+      {
+        "year_num": 2022,
+        "crime_count": 238215
+      },
+      {
+        "year_num": 2023,
+        "crime_count": 73140
+      }
+    ],
+    "insight": "Peak year is 2002 with 486802 cases. From 2001 to 2023, change is -84.95%."
+  },
+  "weekly": {
+    "analysis_id": "weekly_distribution",
+    "title": "Crime Distribution by Weekday",
+    "description": "Compare total crime counts from Monday to Sunday.",
+    "chart_type": "bar",
+    "dimensions": [
+      "weekday_name"
+    ],
+    "metrics": [
+      "crime_count"
+    ],
+    "data": [
+      {
+        "weekday_num": 1,
+        "weekday_name": "Mon",
+        "crime_count": 1100146
+      },
+      {
+        "weekday_num": 2,
+        "weekday_name": "Tue",
+        "crime_count": 1112642
+      },
+      {
+        "weekday_num": 3,
+        "weekday_name": "Wed",
+        "crime_count": 1119819
+      },
+      {
+        "weekday_num": 4,
+        "weekday_name": "Thu",
+        "crime_count": 1108515
+      },
+      {
+        "weekday_num": 5,
+        "weekday_name": "Fri",
+        "crime_count": 1169913
+      },
+      {
+        "weekday_num": 6,
+        "weekday_name": "Sat",
+        "crime_count": 1114957
+      },
+      {
+        "weekday_num": 7,
+        "weekday_name": "Sun",
+        "crime_count": 1058672
+      }
+    ],
+    "insight": "Fri is the highest-crime day with 1169913 cases."
+  },
+  "hourly": {
+    "analysis_id": "hourly_distribution",
+    "title": "Crime Distribution by Hour",
+    "description": "Crime distribution across the 24 hours of a day.",
+    "chart_type": "bar",
+    "dimensions": [
+      "hour_num"
+    ],
+    "metrics": [
+      "crime_count"
+    ],
+    "data": [
+      {
+        "hour_num": 0,
+        "crime_count": 444272
+      },
+      {
+        "hour_num": 1,
+        "crime_count": 246808
+      },
+      {
+        "hour_num": 2,
+        "crime_count": 208146
+      },
+      {
+        "hour_num": 3,
+        "crime_count": 168308
+      },
+      {
+        "hour_num": 4,
+        "crime_count": 127941
+      },
+      {
+        "hour_num": 5,
+        "crime_count": 106840
+      },
+      {
+        "hour_num": 6,
+        "crime_count": 124613
+      },
+      {
+        "hour_num": 7,
+        "crime_count": 177870
+      },
+      {
+        "hour_num": 8,
+        "crime_count": 263432
+      },
+      {
+        "hour_num": 9,
+        "crime_count": 336467
+      },
+      {
+        "hour_num": 10,
+        "crime_count": 329969
+      },
+      {
+        "hour_num": 11,
+        "crime_count": 345202
+      },
+      {
+        "hour_num": 12,
+        "crime_count": 446899
+      },
+      {
+        "hour_num": 13,
+        "crime_count": 369553
+      },
+      {
+        "hour_num": 14,
+        "crime_count": 392468
+      },
+      {
+        "hour_num": 15,
+        "crime_count": 414378
+      },
+      {
+        "hour_num": 16,
+        "crime_count": 393014
+      },
+      {
+        "hour_num": 17,
+        "crime_count": 399856
+      },
+      {
+        "hour_num": 18,
+        "crime_count": 425556
+      },
+      {
+        "hour_num": 19,
+        "crime_count": 438502
+      },
+      {
+        "hour_num": 20,
+        "crime_count": 436963
+      },
+      {
+        "hour_num": 21,
+        "crime_count": 423861
+      },
+      {
+        "hour_num": 22,
+        "crime_count": 416908
+      },
+      {
+        "hour_num": 23,
+        "crime_count": 346838
+      }
+    ],
+    "insight": "Hour 12 is the highest-crime hour with 446899 cases."
+  },
+  "typeShare": {
+    "analysis_id": "crime_type_share",
+    "title": "Crime Type Share",
+    "description": "Top crime types and their percentage share.",
+    "chart_type": "pie",
+    "dimensions": [
+      "primary_type"
+    ],
+    "metrics": [
+      "crime_count",
+      "percentage"
+    ],
+    "data": [
+      {
+        "primary_type": "THEFT",
+        "crime_count": 1642148,
+        "percentage": 21.09
+      },
+      {
+        "primary_type": "BATTERY",
+        "crime_count": 1422913,
+        "percentage": 18.28
+      },
+      {
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 887266,
+        "percentage": 11.4
+      },
+      {
+        "primary_type": "NARCOTICS",
+        "crime_count": 747633,
+        "percentage": 9.6
+      },
+      {
+        "primary_type": "ASSAULT",
+        "crime_count": 507296,
+        "percentage": 6.52
+      },
+      {
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 483642,
+        "percentage": 6.21
+      },
+      {
+        "primary_type": "BURGLARY",
+        "crime_count": 424397,
+        "percentage": 5.45
+      },
+      {
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 375495,
+        "percentage": 4.82
+      },
+      {
+        "primary_type": "DECEPTIVE PRACTICE",
+        "crime_count": 344940,
+        "percentage": 4.43
+      },
+      {
+        "primary_type": "ROBBERY",
+        "crime_count": 292334,
+        "percentage": 3.76
+      }
+    ],
+    "insight": "Top crime type is THEFT with 1642148 cases (21.09% of all selected cases)."
+  },
+  "district": {
+    "analysis_id": "district_comparison",
+    "title": "District Crime Comparison",
+    "description": "Compare crime counts across police districts.",
+    "chart_type": "bar",
+    "dimensions": [
+      "district"
+    ],
+    "metrics": [
+      "crime_count"
+    ],
+    "data": [
+      {
+        "district": 8,
+        "crime_count": 523193
+      },
+      {
+        "district": 11,
+        "crime_count": 499808
+      },
+      {
+        "district": 6,
+        "crime_count": 455120
+      },
+      {
+        "district": 7,
+        "crime_count": 450420
+      },
+      {
+        "district": 25,
+        "crime_count": 442880
+      },
+      {
+        "district": 4,
+        "crime_count": 441996
+      },
+      {
+        "district": 3,
+        "crime_count": 394841
+      },
+      {
+        "district": 12,
+        "crime_count": 385665
+      },
+      {
+        "district": 9,
+        "crime_count": 380367
+      },
+      {
+        "district": 2,
+        "crime_count": 368384
+      }
+    ],
+    "insight": "District 8 has the highest count: 523193 cases."
+  },
+  "heatmap": {
+    "analysis_id": "day_hour_heatmap",
+    "title": "Weekday-Hour Heatmap",
+    "description": "Joint distribution of weekday and hour.",
+    "chart_type": "heatmap",
+    "dimensions": [
+      "weekday_num",
+      "hour_num"
+    ],
+    "metrics": [
+      "crime_count"
+    ],
+    "data": [
+      {
+        "weekday_num": 1,
+        "hour_num": 0,
+        "crime_count": 63029
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 1,
+        "crime_count": 30633
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 2,
+        "crime_count": 24421
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 3,
+        "crime_count": 19033
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 4,
+        "crime_count": 14857
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 5,
+        "crime_count": 13794
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 6,
+        "crime_count": 17917
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 7,
+        "crime_count": 27693
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 8,
+        "crime_count": 41804
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 9,
+        "crime_count": 51964
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 10,
+        "crime_count": 48790
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 11,
+        "crime_count": 49865
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 12,
+        "crime_count": 65369
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 13,
+        "crime_count": 53505
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 14,
+        "crime_count": 56795
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 15,
+        "crime_count": 60035
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 16,
+        "crime_count": 56822
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 17,
+        "crime_count": 57878
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 18,
+        "crime_count": 61717
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 19,
+        "crime_count": 62709
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 20,
+        "crime_count": 61155
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 21,
+        "crime_count": 58991
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 22,
+        "crime_count": 56579
+      },
+      {
+        "weekday_num": 1,
+        "hour_num": 23,
+        "crime_count": 44791
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 0,
+        "crime_count": 59421
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 1,
+        "crime_count": 28364
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 2,
+        "crime_count": 22237
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 3,
+        "crime_count": 17100
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 4,
+        "crime_count": 13541
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 5,
+        "crime_count": 13060
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 6,
+        "crime_count": 18111
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 7,
+        "crime_count": 28931
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 8,
+        "crime_count": 42353
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 9,
+        "crime_count": 52248
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 10,
+        "crime_count": 49123
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 11,
+        "crime_count": 51320
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 12,
+        "crime_count": 66851
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 13,
+        "crime_count": 55536
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 14,
+        "crime_count": 59219
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 15,
+        "crime_count": 61768
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 16,
+        "crime_count": 58332
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 17,
+        "crime_count": 58936
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 18,
+        "crime_count": 62513
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 19,
+        "crime_count": 64723
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 20,
+        "crime_count": 64313
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 21,
+        "crime_count": 61004
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 22,
+        "crime_count": 58042
+      },
+      {
+        "weekday_num": 2,
+        "hour_num": 23,
+        "crime_count": 45596
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 0,
+        "crime_count": 59554
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 1,
+        "crime_count": 28495
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 2,
+        "crime_count": 22406
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 3,
+        "crime_count": 17304
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 4,
+        "crime_count": 13377
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 5,
+        "crime_count": 13065
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 6,
+        "crime_count": 18372
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 7,
+        "crime_count": 28616
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 8,
+        "crime_count": 42787
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 9,
+        "crime_count": 52581
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 10,
+        "crime_count": 49583
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 11,
+        "crime_count": 51398
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 12,
+        "crime_count": 67796
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 13,
+        "crime_count": 56539
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 14,
+        "crime_count": 59886
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 15,
+        "crime_count": 62756
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 16,
+        "crime_count": 58433
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 17,
+        "crime_count": 59261
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 18,
+        "crime_count": 63556
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 19,
+        "crime_count": 65049
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 20,
+        "crime_count": 64237
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 21,
+        "crime_count": 60881
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 22,
+        "crime_count": 58083
+      },
+      {
+        "weekday_num": 3,
+        "hour_num": 23,
+        "crime_count": 45804
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 0,
+        "crime_count": 59242
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 1,
+        "crime_count": 29507
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 2,
+        "crime_count": 23830
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 3,
+        "crime_count": 18785
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 4,
+        "crime_count": 14273
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 5,
+        "crime_count": 13155
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 6,
+        "crime_count": 18296
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 7,
+        "crime_count": 28210
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 8,
+        "crime_count": 42519
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 9,
+        "crime_count": 51888
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 10,
+        "crime_count": 49051
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 11,
+        "crime_count": 51425
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 12,
+        "crime_count": 66241
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 13,
+        "crime_count": 54930
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 14,
+        "crime_count": 58854
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 15,
+        "crime_count": 62076
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 16,
+        "crime_count": 57585
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 17,
+        "crime_count": 57750
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 18,
+        "crime_count": 61139
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 19,
+        "crime_count": 63019
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 20,
+        "crime_count": 62467
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 21,
+        "crime_count": 59771
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 22,
+        "crime_count": 57644
+      },
+      {
+        "weekday_num": 4,
+        "hour_num": 23,
+        "crime_count": 46858
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 0,
+        "crime_count": 61918
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 1,
+        "crime_count": 32001
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 2,
+        "crime_count": 26268
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 3,
+        "crime_count": 20611
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 4,
+        "crime_count": 15652
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 5,
+        "crime_count": 14181
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 6,
+        "crime_count": 18367
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 7,
+        "crime_count": 27800
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 8,
+        "crime_count": 41536
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 9,
+        "crime_count": 52060
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 10,
+        "crime_count": 50464
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 11,
+        "crime_count": 52374
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 12,
+        "crime_count": 68318
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 13,
+        "crime_count": 55635
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 14,
+        "crime_count": 59908
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 15,
+        "crime_count": 64921
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 16,
+        "crime_count": 60166
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 17,
+        "crime_count": 61579
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 18,
+        "crime_count": 65167
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 19,
+        "crime_count": 66217
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 20,
+        "crime_count": 65286
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 21,
+        "crime_count": 64785
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 22,
+        "crime_count": 66202
+      },
+      {
+        "weekday_num": 5,
+        "hour_num": 23,
+        "crime_count": 58497
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 0,
+        "crime_count": 70408
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 1,
+        "crime_count": 47880
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 2,
+        "crime_count": 43259
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 3,
+        "crime_count": 35054
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 4,
+        "crime_count": 26075
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 5,
+        "crime_count": 18310
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 6,
+        "crime_count": 16667
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 7,
+        "crime_count": 19275
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 8,
+        "crime_count": 28229
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 9,
+        "crime_count": 40520
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 10,
+        "crime_count": 44123
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 11,
+        "crime_count": 46868
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 12,
+        "crime_count": 59564
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 13,
+        "crime_count": 49227
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 14,
+        "crime_count": 51388
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 15,
+        "crime_count": 53543
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 16,
+        "crime_count": 52180
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 17,
+        "crime_count": 53204
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 18,
+        "crime_count": 56831
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 19,
+        "crime_count": 59261
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 20,
+        "crime_count": 60755
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 21,
+        "crime_count": 60780
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 22,
+        "crime_count": 63312
+      },
+      {
+        "weekday_num": 6,
+        "hour_num": 23,
+        "crime_count": 58244
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 0,
+        "crime_count": 70700
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 1,
+        "crime_count": 49928
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 2,
+        "crime_count": 45725
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 3,
+        "crime_count": 40421
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 4,
+        "crime_count": 30166
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 5,
+        "crime_count": 21275
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 6,
+        "crime_count": 16883
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 7,
+        "crime_count": 17345
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 8,
+        "crime_count": 24204
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 9,
+        "crime_count": 35206
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 10,
+        "crime_count": 38835
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 11,
+        "crime_count": 41952
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 12,
+        "crime_count": 52760
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 13,
+        "crime_count": 44181
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 14,
+        "crime_count": 46418
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 15,
+        "crime_count": 49279
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 16,
+        "crime_count": 49496
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 17,
+        "crime_count": 51248
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 18,
+        "crime_count": 54633
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 19,
+        "crime_count": 57524
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 20,
+        "crime_count": 58750
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 21,
+        "crime_count": 57649
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 22,
+        "crime_count": 57046
+      },
+      {
+        "weekday_num": 7,
+        "hour_num": 23,
+        "crime_count": 47048
+      }
+    ],
+    "insight": "Peak slot is weekday 7, hour 0 with 70700 cases."
+  },
+  "yoy": {
+    "analysis_id": "yoy_top_types",
+    "title": "Year-over-Year Trend of Top Crime Types",
+    "description": "Compare annual trends for the most common crime categories.",
+    "chart_type": "line",
+    "dimensions": [
+      "year_num",
+      "primary_type"
+    ],
+    "metrics": [
+      "crime_count"
+    ],
+    "data": [
+      {
+        "year_num": 2001,
+        "primary_type": "THEFT",
+        "crime_count": 99277
+      },
+      {
+        "year_num": 2001,
+        "primary_type": "BATTERY",
+        "crime_count": 93460
+      },
+      {
+        "year_num": 2001,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 55858
+      },
+      {
+        "year_num": 2001,
+        "primary_type": "NARCOTICS",
+        "crime_count": 50567
+      },
+      {
+        "year_num": 2001,
+        "primary_type": "ASSAULT",
+        "crime_count": 31384
+      },
+      {
+        "year_num": 2001,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 29663
+      },
+      {
+        "year_num": 2001,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 27552
+      },
+      {
+        "year_num": 2001,
+        "primary_type": "BURGLARY",
+        "crime_count": 26014
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "THEFT",
+        "crime_count": 98331
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "BATTERY",
+        "crime_count": 94153
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 55941
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "NARCOTICS",
+        "crime_count": 51789
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 32600
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "ASSAULT",
+        "crime_count": 31523
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "BURGLARY",
+        "crime_count": 25623
+      },
+      {
+        "year_num": 2002,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 25121
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "THEFT",
+        "crime_count": 98876
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "BATTERY",
+        "crime_count": 88379
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 55011
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "NARCOTICS",
+        "crime_count": 54288
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 31147
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "ASSAULT",
+        "crime_count": 29477
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "BURGLARY",
+        "crime_count": 25156
+      },
+      {
+        "year_num": 2003,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 22748
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "THEFT",
+        "crime_count": 95463
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "BATTERY",
+        "crime_count": 87136
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "NARCOTICS",
+        "crime_count": 57060
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 53164
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 29532
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "ASSAULT",
+        "crime_count": 28850
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "BURGLARY",
+        "crime_count": 24564
+      },
+      {
+        "year_num": 2004,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 22805
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "THEFT",
+        "crime_count": 85684
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "BATTERY",
+        "crime_count": 83964
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "NARCOTICS",
+        "crime_count": 56234
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 54548
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 28028
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "ASSAULT",
+        "crime_count": 27067
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "BURGLARY",
+        "crime_count": 25503
+      },
+      {
+        "year_num": 2005,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 22497
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "THEFT",
+        "crime_count": 86240
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "BATTERY",
+        "crime_count": 80666
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 57124
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "NARCOTICS",
+        "crime_count": 55813
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 27101
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "ASSAULT",
+        "crime_count": 25945
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "BURGLARY",
+        "crime_count": 24324
+      },
+      {
+        "year_num": 2006,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 21818
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "THEFT",
+        "crime_count": 85156
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "BATTERY",
+        "crime_count": 79593
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "NARCOTICS",
+        "crime_count": 54454
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 53749
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 26863
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "ASSAULT",
+        "crime_count": 26313
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "BURGLARY",
+        "crime_count": 24858
+      },
+      {
+        "year_num": 2007,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 18573
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "THEFT",
+        "crime_count": 88435
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "BATTERY",
+        "crime_count": 75926
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 52842
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "NARCOTICS",
+        "crime_count": 46507
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 26533
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "BURGLARY",
+        "crime_count": 26218
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "ASSAULT",
+        "crime_count": 25449
+      },
+      {
+        "year_num": 2008,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 18881
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "THEFT",
+        "crime_count": 80975
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "BATTERY",
+        "crime_count": 68460
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 47725
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "NARCOTICS",
+        "crime_count": 43542
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "BURGLARY",
+        "crime_count": 26767
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 25601
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "ASSAULT",
+        "crime_count": 22861
+      },
+      {
+        "year_num": 2009,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 15482
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "THEFT",
+        "crime_count": 76757
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "BATTERY",
+        "crime_count": 65402
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "NARCOTICS",
+        "crime_count": 43394
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 40653
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "BURGLARY",
+        "crime_count": 26422
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 22012
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "ASSAULT",
+        "crime_count": 21537
+      },
+      {
+        "year_num": 2010,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 19029
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "THEFT",
+        "crime_count": 75152
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "BATTERY",
+        "crime_count": 60459
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "NARCOTICS",
+        "crime_count": 38605
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 37332
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "BURGLARY",
+        "crime_count": 26620
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "ASSAULT",
+        "crime_count": 20411
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 20195
+      },
+      {
+        "year_num": 2011,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 19388
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "THEFT",
+        "crime_count": 75466
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "BATTERY",
+        "crime_count": 59135
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 35855
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "NARCOTICS",
+        "crime_count": 35489
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "BURGLARY",
+        "crime_count": 22845
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "ASSAULT",
+        "crime_count": 19899
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 17483
+      },
+      {
+        "year_num": 2012,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 16492
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "THEFT",
+        "crime_count": 71534
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "BATTERY",
+        "crime_count": 54006
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "NARCOTICS",
+        "crime_count": 34127
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 30855
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 17998
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "ASSAULT",
+        "crime_count": 17972
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "BURGLARY",
+        "crime_count": 17895
+      },
+      {
+        "year_num": 2013,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 12582
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "THEFT",
+        "crime_count": 61568
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "BATTERY",
+        "crime_count": 49451
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "NARCOTICS",
+        "crime_count": 29118
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 27798
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 16985
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "ASSAULT",
+        "crime_count": 16903
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "BURGLARY",
+        "crime_count": 14569
+      },
+      {
+        "year_num": 2014,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 9911
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "THEFT",
+        "crime_count": 57350
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "BATTERY",
+        "crime_count": 48923
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 28676
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "NARCOTICS",
+        "crime_count": 23939
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 17566
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "ASSAULT",
+        "crime_count": 17048
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "BURGLARY",
+        "crime_count": 13184
+      },
+      {
+        "year_num": 2015,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 10068
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "THEFT",
+        "crime_count": 61619
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "BATTERY",
+        "crime_count": 50299
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 31018
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "ASSAULT",
+        "crime_count": 18742
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 17307
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "BURGLARY",
+        "crime_count": 14289
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "NARCOTICS",
+        "crime_count": 13333
+      },
+      {
+        "year_num": 2016,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 11286
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "THEFT",
+        "crime_count": 64381
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "BATTERY",
+        "crime_count": 49238
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 29045
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "ASSAULT",
+        "crime_count": 19306
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 17269
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "BURGLARY",
+        "crime_count": 13001
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "NARCOTICS",
+        "crime_count": 11683
+      },
+      {
+        "year_num": 2017,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 11380
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "THEFT",
+        "crime_count": 65286
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "BATTERY",
+        "crime_count": 49828
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 27824
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "ASSAULT",
+        "crime_count": 20406
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 17263
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "NARCOTICS",
+        "crime_count": 13587
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "BURGLARY",
+        "crime_count": 11746
+      },
+      {
+        "year_num": 2018,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 9985
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "THEFT",
+        "crime_count": 62488
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "BATTERY",
+        "crime_count": 49516
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 26681
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "ASSAULT",
+        "crime_count": 20620
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 16795
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "NARCOTICS",
+        "crime_count": 15069
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "BURGLARY",
+        "crime_count": 9639
+      },
+      {
+        "year_num": 2019,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 8977
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "BATTERY",
+        "crime_count": 41512
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "THEFT",
+        "crime_count": 41314
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 24878
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "ASSAULT",
+        "crime_count": 18254
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 12588
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 9957
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "BURGLARY",
+        "crime_count": 8757
+      },
+      {
+        "year_num": 2020,
+        "primary_type": "NARCOTICS",
+        "crime_count": 7491
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "THEFT",
+        "crime_count": 40788
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "BATTERY",
+        "crime_count": 40460
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 25093
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "ASSAULT",
+        "crime_count": 20341
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 13934
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 10599
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "BURGLARY",
+        "crime_count": 6658
+      },
+      {
+        "year_num": 2021,
+        "primary_type": "NARCOTICS",
+        "crime_count": 5326
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "THEFT",
+        "crime_count": 54750
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "BATTERY",
+        "crime_count": 40883
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 27232
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 21433
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "ASSAULT",
+        "crime_count": 20782
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 14516
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "BURGLARY",
+        "crime_count": 7593
+      },
+      {
+        "year_num": 2022,
+        "primary_type": "NARCOTICS",
+        "crime_count": 4629
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "THEFT",
+        "crime_count": 15258
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "BATTERY",
+        "crime_count": 12064
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 8931
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 8364
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "ASSAULT",
+        "crime_count": 6206
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 4663
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "BURGLARY",
+        "crime_count": 2152
+      },
+      {
+        "year_num": 2023,
+        "primary_type": "NARCOTICS",
+        "crime_count": 1589
+      }
+    ],
+    "insight": "Track yearly trend among the most frequent crime types."
+  },
+  "typeOptions": {
+    "analysis_id": "crime_type_share",
+    "title": "Crime Type Share",
+    "description": "Top crime types and their percentage share.",
+    "chart_type": "pie",
+    "dimensions": [
+      "primary_type"
+    ],
+    "metrics": [
+      "crime_count",
+      "percentage"
+    ],
+    "data": [
+      {
+        "primary_type": "THEFT",
+        "crime_count": 1642148,
+        "percentage": 21.09
+      },
+      {
+        "primary_type": "BATTERY",
+        "crime_count": 1422913,
+        "percentage": 18.28
+      },
+      {
+        "primary_type": "CRIMINAL DAMAGE",
+        "crime_count": 887266,
+        "percentage": 11.4
+      },
+      {
+        "primary_type": "NARCOTICS",
+        "crime_count": 747633,
+        "percentage": 9.6
+      },
+      {
+        "primary_type": "ASSAULT",
+        "crime_count": 507296,
+        "percentage": 6.52
+      },
+      {
+        "primary_type": "OTHER OFFENSE",
+        "crime_count": 483642,
+        "percentage": 6.21
+      },
+      {
+        "primary_type": "BURGLARY",
+        "crime_count": 424397,
+        "percentage": 5.45
+      },
+      {
+        "primary_type": "MOTOR VEHICLE THEFT",
+        "crime_count": 375495,
+        "percentage": 4.82
+      },
+      {
+        "primary_type": "DECEPTIVE PRACTICE",
+        "crime_count": 344940,
+        "percentage": 4.43
+      },
+      {
+        "primary_type": "ROBBERY",
+        "crime_count": 292334,
+        "percentage": 3.76
+      },
+      {
+        "primary_type": "CRIMINAL TRESPASS",
+        "crime_count": 214316,
+        "percentage": 2.75
+      },
+      {
+        "primary_type": "WEAPONS VIOLATION",
+        "crime_count": 106418,
+        "percentage": 1.37
+      },
+      {
+        "primary_type": "PROSTITUTION",
+        "crime_count": 69840,
+        "percentage": 0.9
+      },
+      {
+        "primary_type": "OFFENSE INVOLVING CHILDREN",
+        "crime_count": 55719,
+        "percentage": 0.72
+      },
+      {
+        "primary_type": "PUBLIC PEACE VIOLATION",
+        "crime_count": 52325,
+        "percentage": 0.67
+      },
+      {
+        "primary_type": "SEX OFFENSE",
+        "crime_count": 30683,
+        "percentage": 0.39
+      },
+      {
+        "primary_type": "CRIM SEXUAL ASSAULT",
+        "crime_count": 27631,
+        "percentage": 0.35
+      },
+      {
+        "primary_type": "INTERFERENCE WITH PUBLIC OFFICER",
+        "crime_count": 18392,
+        "percentage": 0.24
+      },
+      {
+        "primary_type": "LIQUOR LAW VIOLATION",
+        "crime_count": 14901,
+        "percentage": 0.19
+      },
+      {
+        "primary_type": "GAMBLING",
+        "crime_count": 14618,
+        "percentage": 0.19
+      },
+      {
+        "primary_type": "ARSON",
+        "crime_count": 13249,
+        "percentage": 0.17
+      },
+      {
+        "primary_type": "HOMICIDE",
+        "crime_count": 12548,
+        "percentage": 0.16
+      },
+      {
+        "primary_type": "KIDNAPPING",
+        "crime_count": 7213,
+        "percentage": 0.09
+      },
+      {
+        "primary_type": "CRIMINAL SEXUAL ASSAULT",
+        "crime_count": 6684,
+        "percentage": 0.09
+      },
+      {
+        "primary_type": "STALKING",
+        "crime_count": 4789,
+        "percentage": 0.06
+      },
+      {
+        "primary_type": "INTIMIDATION",
+        "crime_count": 4679,
+        "percentage": 0.06
+      },
+      {
+        "primary_type": "CONCEALED CARRY LICENSE VIOLATION",
+        "crime_count": 1080,
+        "percentage": 0.01
+      },
+      {
+        "primary_type": "OBSCENITY",
+        "crime_count": 818,
+        "percentage": 0.01
+      },
+      {
+        "primary_type": "PUBLIC INDECENCY",
+        "crime_count": 194,
+        "percentage": 0.0
+      },
+      {
+        "primary_type": "NON-CRIMINAL",
+        "crime_count": 181,
+        "percentage": 0.0
+      }
+    ],
+    "insight": "Top crime type is THEFT with 1642148 cases (21.09% of all selected cases)."
+  },
+  "conclusions": {
+    "total": 7,
+    "conclusions": [
+      {
+        "rank": 1,
+        "title": "Dataset scale",
+        "conclusion": "Within selected range, total records are 7784664 from 2001 to 2023.",
+        "evidence": {
+          "min_year": 2001,
+          "max_year": 2023,
+          "total_rows": 7784664
+        }
+      },
+      {
+        "rank": 2,
+        "title": "Peak annual crime",
+        "conclusion": "Peak annual volume is in 2002 with 486802 cases.",
+        "evidence": {
+          "year_num": 2002,
+          "crime_count": 486802
+        }
+      },
+      {
+        "rank": 3,
+        "title": "Lowest annual crime",
+        "conclusion": "Lowest annual volume is in 2023 with 73140 cases.",
+        "evidence": {
+          "year_num": 2023,
+          "crime_count": 73140
+        }
+      },
+      {
+        "rank": 4,
+        "title": "Peak weekday",
+        "conclusion": "Weekday Fri is the highest-crime day with 1169913 cases.",
+        "evidence": {
+          "weekday_num": 5,
+          "weekday_name": "Fri",
+          "crime_count": 1169913
+        }
+      },
+      {
+        "rank": 5,
+        "title": "Peak hour",
+        "conclusion": "Hour 12 is the peak crime hour with 446899 cases.",
+        "evidence": {
+          "hour_num": 12,
+          "crime_count": 446899
+        }
+      },
+      {
+        "rank": 6,
+        "title": "Top crime type",
+        "conclusion": "Top crime type is THEFT with 1642148 cases (21.09%).",
+        "evidence": {
+          "primary_type": "THEFT",
+          "crime_count": 1642148,
+          "percentage": 21.09
+        }
+      },
+      {
+        "rank": 7,
+        "title": "Top district",
+        "conclusion": "District 8 ranks first with 523193 cases.",
+        "evidence": {
+          "district": 8,
+          "crime_count": 523193
+        }
+      }
+    ]
+  },
+  "snapshot_source": "database",
+  "snapshot_generated_at": "2026-03-30T02:44:46.364487+00:00"
+}
