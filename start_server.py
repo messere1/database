@@ -21,14 +21,20 @@ def maybe_relaunch_with_py311() -> None:
     if sys.version_info >= (3, 10):
         return
 
-    candidates = [
-        Path(os.environ.get("PYTHON311_PATH", "")),
-        Path(r"C:\Users\73110\AppData\Local\Microsoft\WindowsApps\python3.11.exe"),
-        Path(r"C:\Program Files\Python311\python.exe"),
-    ]
+    candidates: list[Path] = []
+    configured_path = os.environ.get("PYTHON311_PATH")
+    if configured_path:
+        candidates.append(Path(configured_path).expanduser())
+
+    candidates.extend(
+        [
+            Path(r"C:\Users\73110\AppData\Local\Microsoft\WindowsApps\python3.11.exe"),
+            Path(r"C:\Program Files\Python311\python.exe"),
+        ]
+    )
 
     for candidate in candidates:
-        if candidate and candidate.exists():
+        if candidate.exists() and candidate.is_file():
             print(f"[bootstrap] Python {sys.version.split()[0]} detected, relaunching with {candidate}")
             os.execv(str(candidate), [str(candidate), str(PROJECT_ROOT / "start_server.py"), *sys.argv[1:]])
 
