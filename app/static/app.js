@@ -1509,6 +1509,56 @@ async function refreshDashboard() {
   }
 }
 
+function addExportFunctionality() {
+  if (document.getElementById('export-btn')) return;
+  const btnRow = document.querySelector('.btn-row');
+  if (!btnRow) {
+    console.error('找不到 .btn-row 容器');
+    return;
+  }
+  if (window.getComputedStyle(btnRow).display !== 'flex') {
+    btnRow.style.display = 'flex';
+    btnRow.style.gap = '10px';
+  }
+  const exportBtn = document.createElement('button');
+  exportBtn.id = 'export-btn';
+  exportBtn.textContent = '导出数据';
+  exportBtn.type = 'button';
+  exportBtn.className = 'btn'; 
+  exportBtn.style.background = 'linear-gradient(135deg, #00a896, #028090)';
+  exportBtn.style.color = 'white';
+  exportBtn.style.border = 'none';
+  exportBtn.style.borderRadius = '12px';
+  exportBtn.style.padding = '11px 16px';
+  exportBtn.style.fontWeight = '700';
+  exportBtn.style.cursor = 'pointer';
+  exportBtn.style.boxShadow = '0 6px 12px rgba(0, 168, 150, 0.2)';
+  exportBtn.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+  exportBtn.addEventListener('mouseenter', () => {
+    exportBtn.style.transform = 'translateY(-2px)';
+    exportBtn.style.boxShadow = '0 8px 16px rgba(0, 168, 150, 0.3)';
+  });
+  exportBtn.addEventListener('mouseleave', () => {
+    exportBtn.style.transform = 'translateY(0)';
+    exportBtn.style.boxShadow = '0 6px 12px rgba(0, 168, 150, 0.2)';
+  });
+  btnRow.appendChild(exportBtn);
+}
+
+async function exportDashboardData() {
+  if (!currentData) return;
+  const dataStr = JSON.stringify(currentData, null, 2);
+  const blob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `dashboard-data-${new Date().toISOString().split('T')[0]}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 function bindEvents() {
   if (!els.crimeTypeTrigger || !els.crimeTypeMenu || !els.crimeTypeDropdown) {
     return;
@@ -1573,11 +1623,35 @@ function bindEvents() {
       renderCharts(currentData);
     }
   });
+  window.addEventListener('resize', () => {
+    if (currentData && currentFilters) {
+      renderCharts(currentData);
+    }
+  });  
+  
+
+  const quickRangeButtons = document.querySelectorAll('.quick-ranges button');
+  quickRangeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const years = button.dataset.years;
+      if (years) {
+        applyQuickRange({ years });
+      }
+    });
+  });
+  
+  const exportBtn = document.getElementById('export-btn');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', exportDashboardData);
+  }
 }
+
 
 async function init() {
   ensureCrimeTypeDropdownElements();
   applyDefaults();
+  addExportFunctionality();
+  // addQuickTimeRanges();
   bindEvents();
   await refreshDashboard();
 }

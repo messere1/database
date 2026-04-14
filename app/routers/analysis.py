@@ -247,3 +247,5 @@ def conclusions(
     if sample:
         return get_sample_conclusions()
     return service.conclusions(db, start_year=start_year, end_year=end_year)
+
+

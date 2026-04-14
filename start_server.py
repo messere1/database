@@ -190,7 +190,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Only check dependencies; do not auto install if missing",
     )
-    parser.add_argument(
+    parser.add_argument(   
         "--no-open-browser",
         action="store_true",
         help="Do not auto open /dashboard after service is ready",
